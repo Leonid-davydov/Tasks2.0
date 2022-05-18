@@ -3,21 +3,18 @@ package task1;
 public class Start {
     public static void main(String[] args) {
         Start obj = new Start();
-        Class <?> start = obj.getClass();
+        Class<?> objClass = obj.getClass();
+        Class<Integer> integerClass = Integer.class;
+        MyClass myClass = new MyClass();
+        Class<?> myClassClass = myClass.getClass();
 
-        System.out.println("Task 1");
-        System.out.println(start.getClassLoader());
-        System.out.println(start.getClassLoader().getParent());
-        System.out.println(start.getClassLoader().getParent().getParent());
+        Printer.taskNumber(1);
+        Printer.printParentsClassLoaders(objClass);
 
-        Class <Integer> integer = Integer.class;
+        Printer.taskNumber(2);
+        Printer.printClassLoader(integerClass);
 
-        System.out.println("Task 2");
-        System.out.println(integer.getClassLoader());
-
-        System.out.println("Task 3");
-        System.out.println(MyClass.class.getClassLoader());
-        System.out.println(MyClass.class.getClassLoader().getParent());
-        System.out.println(MyClass.class.getClassLoader().getParent().getParent());
+        Printer.taskNumber(3);
+        Printer.printParentsClassLoaders(myClassClass);
     }
 }
