@@ -3,10 +3,8 @@ package task18;
 import java.lang.reflect.*;
 
 public class ObjectFactory {
-
-    static <T> T create(Class<T> clazz) throws NoSuchMethodException, InvocationTargetException,
+    public static <T> T create(Class<T> clazz) throws NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
-
         if (chekConstructor(clazz) && chekGettersAndSetters(clazz)) {
             Constructor constructor = clazz.getConstructor();
 
@@ -16,7 +14,7 @@ public class ObjectFactory {
         }
     }
 
-    static boolean chekConstructor(Class clazz) {
+    private static boolean chekConstructor(Class clazz) {
         try {
             Constructor constructor = clazz.getConstructor();
             return true;
@@ -26,7 +24,7 @@ public class ObjectFactory {
         }
     }
 
-    static boolean chekGettersAndSetters(Class clazz) {
+    private static boolean chekGettersAndSetters(Class clazz) {
         try {
             Field[] fields = clazz.getDeclaredFields();
 

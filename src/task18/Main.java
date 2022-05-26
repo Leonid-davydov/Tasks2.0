@@ -6,7 +6,6 @@ import java.text.Annotation;
 public class Main {
     public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException,
             InstantiationException, IllegalAccessException, NoSuchFieldException {
-
         Apple a1 = new Apple();
         a1.setColor("Red");
         a1.setWeight(2.5);
