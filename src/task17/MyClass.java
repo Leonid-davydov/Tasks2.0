@@ -25,4 +25,5 @@ public class MyClass extends A implements Comparable<MyClass>, Cloneable{
 }
 
 class A extends B {}
+
 class B{}

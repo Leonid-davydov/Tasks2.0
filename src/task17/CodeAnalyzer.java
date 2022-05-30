@@ -8,7 +8,6 @@ import java.lang.reflect.Parameter;
 import static task17.Printer.*;
 
 public class CodeAnalyzer {
-
     public static void analyzeClass(Object o) {
         Class oclass = o.getClass();
 
@@ -74,7 +73,6 @@ public class CodeAnalyzer {
         Constructor[] constructors = oclass.getDeclaredConstructors();
 
         for (Constructor constructor : constructors) {
-
             printModifiers(constructor.getModifiers(), 1);
 
             Class[] parametersForModif = constructor.getParameterTypes();
